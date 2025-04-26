@@ -1,4 +1,4 @@
-const API_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTFiNWIzNzEwZjNjNDZmOWIwOTQ2MWI3NzUxZDRmMCIsIm5iZiI6MTcxOTc0NjYyMi4zNjksInN1YiI6IjY2ODE0MDNlNTQyZjgyNzI4ZWFjMzc4MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QeAWNNiX0n3JyZOPlNVMNpRQX4K_64Roa-JxxxCSWfg';
+const API_TOKEN = 'lees token hier zetten';
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?language=nl-NL&page=1';
 const filmsContainer = document.getElementById('filmsContainer');
 const favorietenContainer = document.getElementById('favorietenContainer');
