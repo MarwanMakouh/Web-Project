@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎬 Ontdek Films</title>
+  <link rel="stylesheet" href="../CSS/Stijl.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎬 Ontdek Films</h1>
+
+    <div class="filters">
+      <input type="text" id="zoekveld" placeholder="Zoek een film..." />
+      <select id="sorteerveld">
+        <option value="popularity.desc">Meest populair</option>
+        <option value="vote_average.desc">Beste beoordeling</option>
+        <option value="release_date.desc">Nieuwste releases</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Toon Favorieten knop -->
+    <button id="toonFavorieten">Toon Favorieten</button>
+
+    <!-- 2. Alle films -->
+    <section id="filmsContainer" class="films-raster">
+      <!-- Films worden hier ingeladen -->
+    </section>
+
+    <!-- 3. Favorieten (standaard verborgen) -->
+    <section id="favorietenContainer" class="films-raster" style="display:none;">
+      <!-- Favorieten komen hier -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Gemaakt voor Advanced Web</p>
+  </footer>
+
+  <script src="../JS/main.js"></script>
+</body>
+</html>
