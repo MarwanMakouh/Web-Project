@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>🎬 Ontdek Films</title>
   <link rel="stylesheet" href="../CSS/Stijl.css">
+  <link rel="stylesheet" href="../CSS/DarkMode.css">
+  <link rel="stylesheet" href="../CSS/FilmData.css">
 </head>
+
 <body>
 
   <header>
     <h1>🎬 Ontdek Films</h1>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
 
-    <div class="filters">
-      <input type="text" id="zoekveld" placeholder="Zoek een film..." />
-      <select id="sorteerveld">
+    <form id="zoekForm" class="filters">
+      <input type="text" id="zoekveld" name="query" placeholder="Zoek een film..." required />
+      <select id="sorteerveld" name="sort">
         <option value="popularity.desc">Meest populair</option>
         <option value="vote_average.desc">Beste beoordeling</option>
         <option value="release_date.desc">Nieuwste releases</option>
       </select>
-    </div>
+      <button type="submit">Zoek</button>
+    </form>
+
   </header>
 
   <main>
     <!-- 1. Toon Favorieten knop -->
     <button id="toonFavorieten">Toon Favorieten</button>
+    <button id="ToonFilms">Toon films</button>
 
     <!-- 2. Alle films -->
     <section id="filmsContainer" class="films-raster">
@@ -32,7 +40,13 @@
 
     <!-- 3. Favorieten (standaard verborgen) -->
     <section id="favorietenContainer" class="films-raster" style="display:none;">
-      <!-- Favorieten komen hier -->
+     
+    </section>
+    <section id="filmDetail" class="film-detail" style="display: none;">
+      <button id="sluitDetail">❌ Sluiten</button>
+      <h2 id="detailTitel"></h2>
+      <p id="detailOverzicht"></p>
+      <p><strong>Acteurs:</strong> <span id="detailActeurs"></span></p>
     </section>
   </main>
 
@@ -41,5 +55,9 @@
   </footer>
 
   <script src="../JS/main.js"></script>
+  <script src="../JS/Zoek.js"></script>
+  <script src="../JS/DarkMode.js"></script>
+  <script src="../JS/FilmData.js"></script>
 </body>
+
 </html>

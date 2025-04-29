@@ -1,8 +1,9 @@
-const API_TOKEN = 'lees token hier zetten';
+const API_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTFiNWIzNzEwZjNjNDZmOWIwOTQ2MWI3NzUxZDRmMCIsIm5iZiI6MTcxOTc0NjYyMi4zNjksInN1YiI6IjY2ODE0MDNlNTQyZjgyNzI4ZWFjMzc4MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QeAWNNiX0n3JyZOPlNVMNpRQX4K_64Roa-JxxxCSWfg';
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?language=nl-NL&page=1';
 const filmsContainer = document.getElementById('filmsContainer');
 const favorietenContainer = document.getElementById('favorietenContainer');
 const toonFavorietenKnop = document.getElementById('toonFavorieten');
+const ToonAlleFilms = document.getElementById('ToonFilms');
 
 // Haal films op
 async function haalFilmsOp() {
@@ -36,19 +37,25 @@ function toonFilms(films) {
 
     const posterPath = film.poster_path
       ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
-      : 'path/to/default-image.jpg';
+      : '../DefaultFoto/DefaultPoster.jpg';
 
     filmElement.innerHTML = `
+      <div class="Groote">
+      <div class="FilmInformatie">
       <img src="${posterPath}" alt="${film.title}">
       <div class="film-informatie">
         <h3>${film.title}</h3>
         <p>⭐ ${film.vote_average}</p>
         <p>📅 ${film.release_date}</p>
-        <button class="favoriet-knop">Voeg toe aan favorieten</button>
+        </div>
+      </div>
+      <button class="favoriet-knop">Voeg toe aan favorieten</button>
         <button class="verwijder-knop" style="display: none;">Verwijder uit favorieten</button>
       </div>
     `;
 
+    const infoElement = filmElement.querySelector(".FilmInformatie");
+    infoElement.addEventListener("click", () => haalFilmDetailsOp(film.id));
     // Voeg event listener toe voor de favoriet knop
     const favorietKnop = filmElement.querySelector('.favoriet-knop');
     const verwijderKnop = filmElement.querySelector('.verwijder-knop');
@@ -74,34 +81,58 @@ function voegToeAanFavorieten(film, filmElement) {
 // Verwijder film uit favorieten
 function verwijderVanFavorieten(film, filmElement) {
   let favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
+
+  // Verwijder de film uit de favorietenlijst
   favorieten = favorieten.filter(f => f.id !== film.id);
   localStorage.setItem('favorieten', JSON.stringify(favorieten));
-  filmElement.querySelector('.favoriet-knop').style.display = 'inline-block';
-  filmElement.querySelector('.verwijder-knop').style.display = 'none';
+
+  const favorietKnop = filmElement.querySelector('.favoriet-knop');
+  const verwijderKnop = filmElement.querySelector('.verwijder-knop') || filmElement.querySelector('.verwijder1-knop');
+
+  // Controle: zitten we in de gewone lijst of in de favorietenweergave?
+  if (favorietKnop && verwijderKnop) {
+    // We zitten in de gewone 'films'-lijst ➔ gewoon knoppen wisselen
+    favorietKnop.style.display = 'inline-block';
+    verwijderKnop.style.display = 'none';
+  } else {
+    // We zitten in de favorieten-weergave ➔ volledig element verwijderen
+    filmElement.remove();
+  }
 }
 
 // Toon favorieten
 function toonFavorieten() {
   const favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
-  favorietenContainer.innerHTML = '';
+  favorietenContainer.innerHTML = ``;
+
   if (favorieten.length === 0) {
     favorietenContainer.innerHTML = '<p>Geen favorieten toegevoegd.</p>';
   } else {
     favorieten.forEach(film => {
       const div = document.createElement('div');
       div.classList.add('film-kaart');
-      const poster = film.poster_path
-        ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
-        : 'path/to/default.jpg';
+      const poster = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
+
       div.innerHTML = `
+      <div class="Groote">
+      <div class="FilmInformatie">
         <img src="${poster}" alt="${film.title}">
         <div class="film-informatie">
           <h3>${film.title}</h3>
           <p>⭐ ${film.vote_average}</p>
           <p>📅 ${film.release_date}</p>
-          <button class="verwijder-knop" data-id="${film.id}">Verwijder</button>
+          </div>
+        </div>
+        <button class="verwijder1-knop" data-id="${film.id}">Verwijder</button>
         </div>
       `;
+
+      // Voeg hier de klik-event toe aan de knop
+      const infoFavElement = div.querySelector(".FilmInformatie");
+      infoFavElement.addEventListener("click", () => haalFilmDetailsOp(film.id));
+      const verwijderKnop = div.querySelector('.verwijder1-knop');
+      verwijderKnop.addEventListener('click', () => verwijderVanFavorieten(film, div));
+
       favorietenContainer.appendChild(div);
     });
   }
@@ -111,8 +142,12 @@ function toonFavorieten() {
   favorietenContainer.style.display = 'grid';
 }
 
+
 // Koppel de "Toon Favorieten" knop
 toonFavorietenKnop.addEventListener('click', toonFavorieten);
+ToonAlleFilms.addEventListener('click', () => {
+  location.reload();
+});
 
 // Laad de films bij het laden van de pagina
 document.addEventListener('DOMContentLoaded', haalFilmsOp);

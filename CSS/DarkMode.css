@@ -1,0 +1,25 @@
+/* DARK MODE */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .film-kaart {
+    background-color: #222;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .film-informatie p {
+    color: #bbb;
+  }
+  #darkModeToggle
+  {
+    position:fixed;
+    top: 10px;
+    right: 20px;
+  }
