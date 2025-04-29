@@ -8,7 +8,7 @@ function toggleDarkMode() {
   // Zet de juiste knoptekst
   toggleButton.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
 
-  // Sla op in localStorage
+  // Sla op in localStorage 
   localStorage.setItem('darkMode', isDark);
 }
 
