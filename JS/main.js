@@ -29,6 +29,11 @@ async function haalFilmsOp() {
 
 // Toon films en voeg de favorietenknop toe
 function toonFilms(films) {
+
+  // Verberg de favorieten en toon de films
+  filmsContainer.style.display = 'grid';
+  favorietenContainer.style.display = 'none';
+
   filmsContainer.innerHTML = '';
 
   films.forEach(film => {
@@ -146,6 +151,7 @@ function toonFavorieten() {
 
 // Koppel de "Toon Favorieten" knop
 toonFavorietenKnop.addEventListener('click', toonFavorieten);
+// toont alle films terug
 ToonAlleFilms.addEventListener('click', () => {
   location.reload();
 });
