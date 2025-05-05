@@ -1,4 +1,4 @@
-const API_TOKEN = 'API toevoegen';
+const API_TOKEN = '';
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?language=nl-NL&page=1';
 const filmsContainer = document.getElementById('filmsContainer');
 const favorietenContainer = document.getElementById('favorietenContainer');
@@ -47,11 +47,12 @@ function toonFilms(films) {
         <h3>${film.title}</h3>
         <p>⭐ ${film.vote_average}</p>
         <p>📅 ${film.release_date}</p>
-        </div>
+        </div> 
+      </div>
+      
       </div>
       <button class="favoriet-knop">Voeg toe aan favorieten</button>
-        <button class="verwijder-knop" style="display: none;">Verwijder uit favorieten</button>
-      </div>
+      <button class="verwijder-knop" style="display: none;">Verwijder uit favorieten</button>
     `;
 
     const infoElement = filmElement.querySelector(".FilmInformatie");
