@@ -5,6 +5,7 @@
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -74,7 +75,7 @@ header h1 {
   font-size: 0.9rem;
   cursor: pointer;
   margin: 0.5rem 1rem;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.4s ease;
   font-weight: 500;
 }
 
@@ -98,7 +99,7 @@ header h1 {
   line-height: 20px;
   padding: 6px 16px;
   margin-bottom: 0.5rem;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.4s ease;
 }
 
 #toonFavorieten:hover,
