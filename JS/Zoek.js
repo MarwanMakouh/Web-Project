@@ -10,10 +10,9 @@ zoekForm.addEventListener('submit', async (event) => {
     const sorteerOptie = sorteerveld.value;
 
     if (zoekterm !== '') {
-        console.log(sorteerOptie);
-        
-        const zoekURL = `https://api.themoviedb.org/3/search/movie?query=${zoekterm}&language=nl-NL&page=1`;
 
+        const zoekURL = `https://api.themoviedb.org/3/search/movie?query=${zoekterm}&language=nl-NL&page=1`;
+        
         try {
             const response = await fetch(zoekURL, {
                 method: 'GET',
@@ -28,7 +27,7 @@ zoekForm.addEventListener('submit', async (event) => {
             }
 
             const data = await response.json();
-            
+
             //films sorteeren
             sorteerFilms(data.results,sorteerOptie);
             toonFilms(data.results); // Zorg dat toonFilms ook beschikbaar is in dit script

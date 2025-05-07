@@ -29,7 +29,6 @@ async function haalFilmsOp() {
 
 // Toon films en voeg de favorietenknop toe
 function toonFilms(films) {
-
   // Verberg de favorieten en toon de films
   filmsContainer.style.display = 'grid';
   favorietenContainer.style.display = 'none';
@@ -54,10 +53,9 @@ function toonFilms(films) {
         <p>📅 ${film.release_date}</p>
         </div> 
       </div>
-      
       </div>
-      <button class="favoriet-knop">Voeg toe aan favorieten</button>
-      <button class="verwijder-knop" style="display: none;">Verwijder uit favorieten</button>
+      <button  class="favoriet-knop"  >Voeg toe aan favorieten</button>
+      <button class="verwijder-knop"   style="display: none;">Verwijder uit favorieten</button>
     `;
 
     const infoElement = filmElement.querySelector(".FilmInformatie");
@@ -129,8 +127,8 @@ function toonFavorieten() {
           <p>📅 ${film.release_date}</p>
           </div>
         </div>
-        <button class="verwijder1-knop" data-id="${film.id}">Verwijder</button>
         </div>
+          <button id="Button_Layout" class="verwijder1-knop"  data-id="${film.id}">Verwijder</button>
       `;
 
       // Voeg hier de klik-event toe aan de knop
