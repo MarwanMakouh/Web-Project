@@ -11,18 +11,7 @@
   z-index: 1000; 
   overflow-y: auto;
   padding: 2rem;
-}
-
-/* Content binnen de overlay */
-#filmDetail.film-detail-content {
-  background-color: white;
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #333;
+  box-sizing: border-box;
 }
 
 /* Close-knop */
@@ -39,19 +28,6 @@
   cursor: pointer;
   font-size: 1rem;
   z-index: 1001;
-}
-
-/* Titel */
-#filmDetail.film-detail-content h2 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-/* Overzicht en acteurs */
-#filmDetail.film-detail-content p {
-  margin-bottom: 1rem;
-  line-height: 1.4;
-  font-size: 1rem;
 }
 
 #filmDetail
