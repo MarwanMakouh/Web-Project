@@ -1,7 +1,9 @@
 const zoekForm = document.getElementById('zoekForm');
 const zoekveld = document.getElementById('zoekveld');
 const sorteerveld = document.getElementById('sorteerveld');
-
+let LaadExtraURL = "";
+//
+let IsZoek = false;
 zoekForm.addEventListener('submit', async (event) => {
     //event is het object dat de info bezit van de form
     event.preventDefault(); // voorkom herladen
@@ -11,6 +13,8 @@ zoekForm.addEventListener('submit', async (event) => {
 
     if (zoekterm !== '') {
 
+        IsZoek = true;
+        LaadExtraURL = `https://api.themoviedb.org/3/search/movie?query=${zoekterm}&language=nl-NL&page=`; 
         const zoekURL = `https://api.themoviedb.org/3/search/movie?query=${zoekterm}&language=nl-NL&page=1`;
         
         try {
