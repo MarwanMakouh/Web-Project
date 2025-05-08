@@ -7,13 +7,14 @@
   <title>🎬 Ontdek Films</title>
   <link rel="stylesheet" href="../CSS/Stijl.css">
   <link rel="stylesheet" href="../CSS/DarkMode.css">
-  <link rel="stylesheet" href="../CSS/FilmData.css"> 
+  <link rel="stylesheet" href="../CSS/FilmData.css">
 </head>
 
 <body>
+  <p id="Naar_Boven"></p>
   <header>
     <h1>🎬 Ontdek Films</h1>
-    <button id="darkModeToggle">🌙 Dark Mode</button> 
+    <button id="darkModeToggle">🌙 Dark Mode</button>
 
     <form id="zoekForm" class="filters">
       <input type="text" id="zoekveld" name="query" placeholder="Zoek een film..." required>
@@ -25,32 +26,34 @@
       <button class="Button_Layout" type="submit">Zoek</button>
     </form>
 
+    <!-- 1. Toon Favorieten knop -->
+    <button id="toonFavorieten">Toon Favorieten</button>
+    <button id="ToonFilms">Toon films</button>
   </header>
 
   <main>
     <section class="films-wrapper">
-    <!-- 1. Toon Favorieten knop -->
-    <button id="toonFavorieten">Toon Favorieten</button>
-    <button id="ToonFilms">Toon films</button>
 
-    <!-- 2. Alle films -->
-    <section id="filmsContainer" class="films-raster">
-      <!-- Films worden hier ingeladen -->
+      <!-- 2. Alle films -->
+      <section id="MovieContainer" class="films-raster">
+        <!-- Films worden hier ingeladen -->
+      </section>
+
+      <!-- 3. Favorieten (standaard verborgen) -->
+      <section id="favorietenContainer" class="films-raster" style="display:none;">
+      </section>
+      <!--Overlay voor de detials van de film-->
+      <section id="filmDetail" class="film-detail" style="display: none;">
+        <button id="sluitDetail">❌ Sluiten</button>
+        <h2 id="detailTitel"></h2>
+        <p id="detailOverzicht"></p>
+        <p><strong>Acteurs:</strong> <span id="detailActeurs"></span></p>
+      </section>
+      <button class="Button_Layout" id="laadMeerKnop">Laad meer films</button>
+
     </section>
-  
-    <!-- 3. Favorieten (standaard verborgen) -->
-    <section id="favorietenContainer" class="films-raster" style="display:none;">
-    </section>
-    <!--Overlay voor de detials van de film-->
-    <section id="filmDetail" class="film-detail" style="display: none;">
-      <button id="sluitDetail">❌ Sluiten</button>
-      <h2 id="detailTitel"></h2>
-      <p id="detailOverzicht"></p>
-      <p><strong>Acteurs:</strong> <span id="detailActeurs"></span></p>
-    </section>
-    <button class="Button_Layout" id="laadMeerKnop">Laad meer films</button>
-    
-  </section>
+
+    <button id="TopKnop">🔼</button>
   </main>
 
   <footer>
@@ -62,6 +65,7 @@
   <script src="../JS/FilmData.js"></script>
   <script src="../JS/Zoek.js"></script>
   <script src="../JS/ExtrafilmsLaden.js"></script>
+  <script src="../JS/NaarBoven.js"></script>
 </body>
 
 </html>

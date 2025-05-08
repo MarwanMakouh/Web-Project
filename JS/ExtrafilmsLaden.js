@@ -66,7 +66,7 @@ function toonFilmsBij(films) {
     favorietKnop.addEventListener('click', () => voegToeAanFavorieten(film, filmElement));
     verwijderKnop.addEventListener('click', () => verwijderVanFavorieten(film, filmElement));
 
-    filmsContainer.appendChild(filmElement);
+    MovieContainer.appendChild(filmElement);
   });
 }
 
