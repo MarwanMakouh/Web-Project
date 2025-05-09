@@ -1,9 +1,10 @@
 const API_TOKEN = '';
 const API_URL = 'https://api.themoviedb.org/3/movie/popular?language=nl-NL&page=1';
-const filmsContainer = document.getElementById('filmsContainer');
+const MovieContainer = document.getElementById('MovieContainer');
 const favorietenContainer = document.getElementById('favorietenContainer');
 const toonFavorietenKnop = document.getElementById('toonFavorieten');
 const ToonAlleFilms = document.getElementById('ToonFilms');
+const laadMeerKnop1 = document.getElementById('laadMeerKnop');
 
 // Haal films op
 async function haalFilmsOp() {
@@ -30,10 +31,10 @@ async function haalFilmsOp() {
 // Toon films en voeg de favorietenknop toe
 function toonFilms(films) {
   // Verberg de favorieten en toon de films
-  filmsContainer.style.display = 'grid';
+  MovieContainer.style.display = 'grid';
   favorietenContainer.style.display = 'none';
 
-  filmsContainer.innerHTML = '';
+  MovieContainer.innerHTML = '';
 
   films.forEach(film => {
     const filmElement = document.createElement('div');
@@ -54,8 +55,8 @@ function toonFilms(films) {
         </div> 
       </div>
       </div>
-      <button  class="favoriet-knop"  >Voeg toe aan favorieten</button>
-      <button class="verwijder-knop"   style="display: none;">Verwijder uit favorieten</button>
+      <button class="favoriet-knop">Voeg toe aan favorieten</button>
+      <button class="verwijder-knop" style="display: none;">Verwijder uit favorieten</button>
     `;
 
     const infoElement = filmElement.querySelector(".FilmInformatie");
@@ -67,7 +68,7 @@ function toonFilms(films) {
     favorietKnop.addEventListener('click', () => voegToeAanFavorieten(film, filmElement));
     verwijderKnop.addEventListener('click', () => verwijderVanFavorieten(film, filmElement));
 
-    filmsContainer.appendChild(filmElement);
+    MovieContainer.appendChild(filmElement);
   });
 }
 
@@ -105,9 +106,34 @@ function verwijderVanFavorieten(film, filmElement) {
 }
 
 // Toon favorieten
+// TOON FAVORIETEN MET SORTEER-FORMULIER
 function toonFavorieten() {
-  const favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
-  favorietenContainer.innerHTML = ``;
+  laadMeerKnop1.style.display = 'none';
+
+  // Toon het formulier voor sorteren
+  const sorteerFormulier = document.getElementById('favorietenForm');
+  sorteerFormulier.style.display = 'block';
+
+  const sorteerSelect = document.getElementById('sorteerFavorieten');
+  const sorteerWaarde = sorteerSelect ? sorteerSelect.value : 'release_date.desc';
+
+  let favorieten = JSON.parse(localStorage.getItem('favorieten')) || [];
+
+  // Sorteer op basis van de dropdown
+  favorieten.sort((a, b) => {
+    if (sorteerWaarde === 'release_date.desc') {
+      return new Date(b.release_date) - new Date(a.release_date);
+    } else if (sorteerWaarde === 'release_date.asc') {
+      return new Date(a.release_date) - new Date(b.release_date);
+    } else if (sorteerWaarde === 'vote_average.desc') {
+      return b.vote_average - a.vote_average;
+    } else if (sorteerWaarde === 'vote_average.asc') {
+      return a.vote_average - b.vote_average;
+    }
+    return 0;
+  });
+
+  favorietenContainer.innerHTML = '';
 
   if (favorieten.length === 0) {
     favorietenContainer.innerHTML = '<p>Geen favorieten toegevoegd.</p>';
@@ -128,21 +154,18 @@ function toonFavorieten() {
           </div>
         </div>
         </div>
-          <button id="Button_Layout" class="verwijder1-knop"  data-id="${film.id}">Verwijder</button>
+          <button id="Button_Layout" class="verwijder1-knop" data-id="${film.id}">Verwijder</button>
       `;
 
-      // Voeg hier de klik-event toe aan de knop
-      const infoFavElement = div.querySelector(".FilmInformatie");
-      infoFavElement.addEventListener("click", () => haalFilmDetailsOp(film.id));
-      const verwijderKnop = div.querySelector('.verwijder1-knop');
-      verwijderKnop.addEventListener('click', () => verwijderVanFavorieten(film, div));
+      div.querySelector('.FilmInformatie').addEventListener('click', () => haalFilmDetailsOp(film.id));
+      div.querySelector('.verwijder1-knop').addEventListener('click', () => verwijderVanFavorieten(film, div));
 
       favorietenContainer.appendChild(div);
     });
   }
 
-  // Verberg de films en toon favorieten
-  filmsContainer.style.display = 'none';
+  // Verberg de normale filmweergave
+  MovieContainer.style.display = 'none';
   favorietenContainer.style.display = 'grid';
 }
 
@@ -156,3 +179,5 @@ ToonAlleFilms.addEventListener('click', () => {
 
 // Laad de films bij het laden van de pagina
 document.addEventListener('DOMContentLoaded', haalFilmsOp);
+document.getElementById('sorteerFavorieten').addEventListener('change', toonFavorieten);
+
