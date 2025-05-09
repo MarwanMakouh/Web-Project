@@ -129,6 +129,11 @@ header h1 {
   transition: background-color 0.4s ease;
 }
 
+#toonFavorieten
+{
+  width: 166.06px;
+}
+
 #toonFavorieten:hover,
 #ToonFilms:hover
 {
@@ -171,6 +176,11 @@ main {
 
 .film-kaart:hover {
   transform: translateY(-5px);
+}
+
+.Groote
+{
+  cursor: pointer;
 }
 
 .film-kaart img {
