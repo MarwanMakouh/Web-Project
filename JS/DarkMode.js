@@ -1,9 +1,9 @@
-const toggleButton = document.getElementById('darkModeToggle');
+const toggleButton = document.getElementById('ThemaToggle');
 
 // Functie om dark mode aan/uit te zetten
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode'); 
 
   // Zet de juiste knoptekst
   toggleButton.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
