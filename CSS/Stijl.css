@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-  background-color: #2c3e50;
+  background-color: #808879;
   color: rgb(255, 255, 255);
   padding: 1rem;
   text-align: center;
@@ -162,7 +162,7 @@ main {
 
 /* Filmkaart */
 .film-kaart {
-  background-color: #E4D6B7;
+  background-color: #d3c4a4;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
