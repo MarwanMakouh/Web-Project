@@ -17,7 +17,8 @@
     <button id="darkModeToggle">🌙 Dark Mode</button>
 
     <form id="zoekForm" class="filters">
-      <input type="text" id="zoekveld" name="query" placeholder="Zoek een film..." required>
+      <input type="text" id="zoekveld" name="query" placeholder="Zoek een film..." >
+      <input type="number" id="jaarFilter" name="jaar" min="1900" max="2100" placeholder="Jaar (bv. 2020)">
       <select id="sorteerveld" name="sort">
         <option value="popularity.desc">Meest populair</option>
         <option value="vote_average.desc">Beste beoordeling</option>
@@ -28,7 +29,7 @@
 
     <!-- 1. Toon Favorieten knop -->
     <button id="toonFavorieten">Toon Favorieten</button>
-    <button id="ToonFilms">Toon films</button>
+    <button id="ToonFilms">Toon populaire films</button>
   </header>
 
   <main>
