@@ -5,7 +5,7 @@ const sorteerveld = document.getElementById('sorteerveld');
 let LaadExtraURL = "";
 let IsZoek = false;
 
-zoekForm.addEventListener('change', async (event) => {
+zoekForm.addEventListener('input', async (event) => {
     event.preventDefault(); // voorkom herladen
 
     const zoekterm = zoekveld.value.trim();
