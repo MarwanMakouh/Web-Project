@@ -1,9 +1,11 @@
+// HTML-elementen ophalen
 const detailSectie = document.getElementById("filmDetail");
 const sluitKnop = document.getElementById("sluitDetail");
 const titelEl = document.getElementById("detailTitel");
 const overzichtEl = document.getElementById("detailOverzicht");
 const acteursEl = document.getElementById("detailActeurs");
 
+// Haal filmgegevens op via API
 async function haalFilmDetailsOp(filmId) {
   const API_DETAILS_URL = `https://api.themoviedb.org/3/movie/${filmId}?language=nl-NL&append_to_response=credits`;
 
@@ -25,6 +27,7 @@ async function haalFilmDetailsOp(filmId) {
     overzichtEl.textContent = data.overview;
     acteursEl.textContent = acteurs;
 
+    // Toon detailsectie en scroll ernaartoe
     detailSectie.style.display = "block";
     detailSectie.scrollIntoView({ behavior: "smooth" });
 
@@ -33,7 +36,7 @@ async function haalFilmDetailsOp(filmId) {
   }
 }
 
-// Sluit knop
+// Detailsectie sluiten
 sluitKnop.addEventListener("click", () => {
   detailSectie.style.display = "none";
 });

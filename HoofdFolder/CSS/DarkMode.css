@@ -1,61 +1,67 @@
-/* DARK MODE */
+/* DARK MODE kleuren voor de pagina */
 body.dark-mode {
-    background-color: #121212; 
-    color: #f0f0f0;
-  }
-  
-  body.dark-mode header,
-  body.dark-mode footer {
-    background-color: #1e1e1e;
-  }
-  
-  body.dark-mode .film-kaart {
-    background-color: #222;
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-  }
-  
-  body.dark-mode .film-informatie p {
-    color: #bbb;
-  }
-  #ThemaToggle
-  {
-    position:fixed;
-    top: 10px;
-    right: 20px;
-  }
+  background-color: #121212; /* Donkere achtergrond */
+  color: #f0f0f0; /* Lichte tekstkleur */
+}
 
-  #ThemaToggle {
-    appearance: none;
-    background-color: #FAFBFC;
-    border: 1px solid rgba(27, 31, 35, 0.15);
-    border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-    box-sizing: border-box;
-    color: #24292E;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    padding: 6px 16px;
-    
-  }
-  
-  #ThemaToggle:hover {
-    background-color: #F3F4F6;
-    text-decoration: none;
-    transition-duration: 0.1s;
-  }
-  
-  #ThemaToggle:disabled {
-    background-color: #FAFBFC;
-    border-color: rgba(27, 31, 35, 0.15);
-    color: #959DA5;
-    cursor: default;
-  }
-  
-  #ThemaToggle:active {
-    background-color: #EDEFF2;
-    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-    transition: none 0s;
-  }
-  
+/* Donkere achtergrond voor header en footer */
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+/* Donkere stijl voor filmkaarten */
+body.dark-mode .film-kaart {
+  background-color: #222;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1); /* Zachte witte schaduw */
+}
+
+/* Donkere stijl voor tekst in filmkaarten */
+body.dark-mode .film-informatie p {
+  color: #bbb; /* Lichtgrijze tekst */
+}
+
+/* Positie van de dark mode knop rechtsboven vastzetten */
+#ThemaToggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}
+
+/* Standaardstijl van de dark mode knop */
+#ThemaToggle {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+}
+
+/* Hoverstijl van de knop */
+#ThemaToggle:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+/* Knopstijl wanneer uitgeschakeld */
+#ThemaToggle:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+/* Stijl wanneer knop ingedrukt wordt */
+#ThemaToggle:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
