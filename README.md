@@ -120,6 +120,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
   - https://chatgpt.com/share/6821f45b-7744-8004-8f87-5565d2c9a1a7
   - https://chatgpt.com/share/6821f600-3d04-8004-b46d-78a2760638ff
   - https://chatgpt.com/share/6821f696-6fb8-8004-9dbf-8c9283f8233f
+  - https://chatgpt.com/share/6821ff4c-03ec-8004-9c9f-d36b140c9808
 - MDN Web Docs (JavaScript, Fetch API, CSS Grid/Flexbox)
 - https://getcssscan.com/css-buttons-examples
 
