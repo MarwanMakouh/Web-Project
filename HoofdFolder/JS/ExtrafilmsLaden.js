@@ -4,9 +4,7 @@ let LadenURL;
 async function haalVolgendePaginaOp() {
   huidigePagina++;
 
-  if (IsZoek) {
-    console.log("test");
-    
+  if (IsZoek) {   
     LadenURL = LaadExtraURL;
   }else {
     LadenURL = 'https://api.themoviedb.org/3/movie/popular?language=nl-NL&page=';
