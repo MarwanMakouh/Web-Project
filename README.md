@@ -38,11 +38,11 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 |------------------------------|--------------------------------|------------|
 | API-data ophalen             | `main.js`                      | 1-12         |
 | 20+ items laden              | `main.js` / `ExtrafilmsLaden.js` | 12+     |
-| Data tonen (lijst + details) | `FilmData.js`                  | 8–50       |
+| Data tonen (lijst + details) | `FilmData.js` / `main.js`      | Data --> 8–50 main--> 32-72 en  |
 | Filter op jaar               | `Zoek.js`                      | 3          |
 | Zoekfunctie                  | `Zoek.js`                      | 2          |
 | Sorteren                     | `Zoek.js`                      | 4          |
-| Favorieten opslaan           | `FilmData.js`                  | zie `localStorage.setItem` |
+| Favorieten opslaan           | `main.js`                      | 76-106     |
 | Donkere modus + opslag       | `DarkMode.js`                  | 12         |
 | Observer API (scroll)        | `NaarBoven.js`                 | 4          |
 | Responsive design            | `FilmData.css`, `Stijl.css`    | overal     |
