@@ -36,15 +36,15 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 | Functie                       | Bestand                        | Regel(s)   |
 |------------------------------|--------------------------------|------------|
-| API-data ophalen             | `main.js`                      | 1-12         |
-| 20+ items laden              | `main.js` / `ExtrafilmsLaden.js` | 12+     |
-| Data tonen (lijst + details) | `FilmData.js` / `main.js`      | Data --> 8–50 main--> 32-72 en  |
+| API-data ophalen             | `main.js`                      | 1-12       |
+| 20+ items laden              | `main.js` / `ExtrafilmsLaden.js`| 12+       |
+| Data tonen (lijst + details) | `FilmData.js` / `main.js`      | Data --> 9–43 main--> 32-72 en  |
 | Filter op jaar               | `Zoek.js`                      | 3          |
 | Zoekfunctie                  | `Zoek.js`                      | 2          |
 | Sorteren                     | `Zoek.js`                      | 4          |
 | Favorieten opslaan           | `main.js`                      | 76-106     |
 | Donkere modus + opslag       | `DarkMode.js`                  | 12         |
-| Observer API (scroll)        | `NaarBoven.js`                 | 4          |
+| Observer API (scroll)        | `NaarBoven.js`                 | 6          |
 | Responsive design            | `FilmData.css`, `Stijl.css`    | overal     |
 | Gebruikersinterface          | `index.html`, `FilmData.js`    | algemeen   |
 
@@ -54,16 +54,16 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 | Concept                            | Bestand                   | Regel(s)       |
 |-----------------------------------|----------------------------|----------------|
-| DOM selectie & manipulatie        | `FilmData.js`, `main.js`   | 5–30           |
+| DOM selectie & manipulatie        | `FilmData.js`, `main.js`   | 2-6 en 25-32   |
 | Event listeners                   | `Zoek.js`, `DarkMode.js`   | 2+, 10+        |
 | `const`, `let`                    | Alle JS-bestanden          | overal         |
-| Template literals                 | `FilmData.js`              | regel 8        |
-| Array-methodes (map, filter, ...) | `main.js`, `FilmData.js`   | 12+            |
-| Arrow functions                   | `NaarBoven.js`             | regel 4        |
-| Ternary operator                  | `FilmData.js`              | regel 8        |
-| Callback functies                 | `FilmData.js`              | 20+            |
+| Template literals                 | `FilmData.js`              | regel 10       |
+| Array-methodes (map, filter, ...) | `main.js`, `FilmData.js`   | 13+            |
+| Arrow functions                   | `NaarBoven.js`             | regel 6        |
+| Ternary operator                  | `main.js`                  | 43-46          |
+| Callback functies                 | `ExtrafilmsLaden.js`       | 31             |
 | Promises / Async & Await          | `main.js`, `Zoek.js`       | 12+, 24        |
-| Observer API                      | `NaarBoven.js`             | regel 4        |
+| Observer API                      | `NaarBoven.js`             | regel 6 en 13  |
 
 ---
 
@@ -71,7 +71,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 | Functie                    | Bestand           | Regel(s)               |
 |---------------------------|-------------------|------------------------|
-| `localStorage` gebruik     | `FilmData.js`     | zie `setItem`          |
+| `localStorage` gebruik     | `main.js`     | 80                     |
 | Donkere modus voorkeur     | `DarkMode.js`     | regel 12               |
 
 ---
