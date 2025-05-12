@@ -115,8 +115,13 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 ## 📚 Gebruikte bronnen
 
 - [The Movie Database API documentatie](https://developer.themoviedb.org/docs)
-- ChatGPT (voor uitleg en validatie)
+- [ChatGPT (voor uitleg en validatie)]
+  - https://chatgpt.com/share/6821f38b-baec-8004-8d8d-598cfc0c9e43
+  - https://chatgpt.com/share/6821f45b-7744-8004-8f87-5565d2c9a1a7
+  - https://chatgpt.com/share/6821f600-3d04-8004-b46d-78a2760638ff
+  - https://chatgpt.com/share/6821f696-6fb8-8004-9dbf-8c9283f8233f
 - MDN Web Docs (JavaScript, Fetch API, CSS Grid/Flexbox)
+- https://getcssscan.com/css-buttons-examples
 
 ---
 
