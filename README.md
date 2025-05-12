@@ -73,7 +73,6 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 |---------------------------|-------------------|------------------------|
 | `localStorage` gebruik     | `FilmData.js`     | zie `setItem`          |
 | Donkere modus voorkeur     | `DarkMode.js`     | regel 12               |
-| Formulier validatie        | ❌ Niet aanwezig  | Niet geïmplementeerd   |
 
 ---
 
