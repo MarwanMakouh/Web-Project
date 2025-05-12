@@ -180,4 +180,3 @@ ToonAlleFilms.addEventListener('click', () => {
 // Laad de films bij het laden van de pagina
 document.addEventListener('DOMContentLoaded', haalFilmsOp);
 document.getElementById('sorteerFavorieten').addEventListener('change', toonFavorieten);
-
