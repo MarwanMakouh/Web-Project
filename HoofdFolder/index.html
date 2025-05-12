@@ -17,8 +17,10 @@
     <h1>🎬 Ontdek Films</h1>
     <button id="ThemaToggle">🌙 Dark Mode</button>
 
+
+    <!-- Zoek- en filterformulier -->
     <form id="zoekForm" class="filters">
-      <input type="text" id="zoekveld" name="query" placeholder="Zoek een film..." >
+      <input type="text" id="zoekveld" name="query" placeholder="Zoek een film...">
       <input type="number" id="jaarFilter" name="jaar" min="1900" max="2100" placeholder="Jaar (bv. 2020)">
       <select id="sorteerveld" name="sort">
         <option value="popularity.desc">Meest populair</option>
@@ -27,11 +29,12 @@
       </select>
     </form>
 
-    <!-- 1. Toon Favorieten knop -->
+    <!-- 1. Navigatieknoppen  -->
     <button id="toonFavorieten">Toon Favorieten</button>
     <button id="ToonFilms">Toon populaire films</button>
 
-    <form id="favorietenForm" style="display: none;" class="filters" >
+    <!--Sorteeropties voor favorieten-->>
+    <form id="favorietenForm" style="display: none;" class="filters">
       <label for="sorteerFavorieten">Sorteer favorieten op:</label>
       <select id="sorteerFavorieten" name="sorteer">
         <option value="release_date.desc">Nieuwste eerst</option>
@@ -40,20 +43,21 @@
         <option value="vote_average.asc">Slechtste beoordeling</option>
       </select>
     </form>
-    
+
   </header>
 
   <main>
     <section class="films-wrapper">
 
-      <!-- 2. Alle films -->
+      <!-- Container voor alle films -->
       <section id="MovieContainer" class="films-raster">
         <!-- Films worden hier ingeladen -->
       </section>
 
-      <!-- 3. Favorieten (standaard verborgen) -->
+      <!-- 3.  Container voor favorieten  (standaard verborgen) -->
       <section id="favorietenContainer" class="films-raster" style="display:none;">
       </section>
+
       <!--Overlay voor de detials van de film-->
       <section id="filmDetail" class="film-detail" style="display: none;">
         <button id="sluitDetail">❌ Sluiten</button>
@@ -61,10 +65,12 @@
         <p id="detailOverzicht"></p>
         <p><strong>Acteurs:</strong> <span id="detailActeurs"></span></p>
       </section>
+      <!-- Laad meer knop -->
       <button class="Button_Layout" id="laadMeerKnop">Laad meer films</button>
 
     </section>
 
+    <!-- Terug naar boven knop -->
     <button id="TopKnop">🔼</button>
   </main>
 
