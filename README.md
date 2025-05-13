@@ -1,6 +1,6 @@
 # 🎬 Movie Explorer SPA
 
-Een interactieve single-page applicatie waarmee gebruikers populaire films kunnen bekijken, filteren, zoeken en toevoegen aan hun favorieten. Gebouwd voor het vak **Advanced Web** aan de hand van `The Movie Database API`.
+Een interactieve single-page applicatie waarmee gebruikers populaire films kunnen zoeken, filteren en toevoegen aan hun favorieten. Gebouwd voor het vak **Advanced Web** aan de hand van `The Movie Database API`.
 
 ---
 
