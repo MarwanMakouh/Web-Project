@@ -87,7 +87,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 2. Ga naar de map van de gekloonde repository
    `cd Web-Project`
 
-3. Open de map in vs code en voeg jouw eigen TMDB APIsleutel toe aan `main.js`
+3. Open de map in vs code en voeg jouw eigen TMDB API-leestoegangstoken toe aan `main.js`
 
 4. Installeer dependencies in de termilnal
    `npm install`
