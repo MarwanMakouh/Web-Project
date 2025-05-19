@@ -108,6 +108,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 <img width="718" alt="Screenshot 2025-05-12 145848" src="https://github.com/user-attachments/assets/d1eb597b-8828-4554-a1ed-f0511bf99957" />
 <img width="1257" alt="Screenshot 2025-05-12 145919" src="https://github.com/user-attachments/assets/b2ec20bf-a288-45f9-b669-0302716303b8" />
 <img width="1235" alt="Screenshot 2025-05-12 145942" src="https://github.com/user-attachments/assets/4b62343b-fa60-4dc7-9c3e-9bbe6369accc" />
+<img width="889" alt="Screenshot 2025-05-19 171408" src="https://github.com/user-attachments/assets/81e099fe-0d8b-413b-a688-866061a1cef4" />
 <img width="1211" alt="Screenshot 2025-05-12 150009" src="https://github.com/user-attachments/assets/8fa73593-d147-4f25-9320-76707abde175" />
 <img width="1238" alt="Screenshot 2025-05-12 150056" src="https://github.com/user-attachments/assets/cf9c2b24-34ac-4b18-a7d7-de56083d84a2" />
 <img width="1241" alt="Screenshot 2025-05-12 150111" src="https://github.com/user-attachments/assets/3758b346-3c1c-4870-aae7-e77e82cf78e9" />
@@ -119,15 +120,14 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 ## 📚 Gebruikte bronnen
 
-- [The Movie Database API documentatie](https://developer.themoviedb.org/docs)
-- [ChatGPT (voor uitleg en validatie)]
-  - https://chatgpt.com/share/6821f38b-baec-8004-8d8d-598cfc0c9e43
-  - https://chatgpt.com/share/6821f45b-7744-8004-8f87-5565d2c9a1a7
-  - https://chatgpt.com/share/6821f600-3d04-8004-b46d-78a2760638ff
-  - https://chatgpt.com/share/6821f696-6fb8-8004-9dbf-8c9283f8233f
-  - https://chatgpt.com/share/6821ff4c-03ec-8004-9c9f-d36b140c9808
-- MDN Web Docs (JavaScript, Fetch API, CSS Grid/Flexbox)
-- https://getcssscan.com/css-buttons-examples
+- OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f38b-baec-8004-8d8d-598cfc0c9e43
+- OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f45b-7744-8004-8f87-5565d2c9a1a7
+- OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f600-3d04-8004-b46d-78a2760638ff
+- OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f696-6fb8-8004-9dbf-8c9283f8233f
+- OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821ff4c-03ec-8004-9c9f-d36b140c9808
+- The Movie Database (TMDb). (z.d.). TMDb API documentation. https://developer.themoviedb.org
+- MDN Web Docs. (z.d.). JavaScript, Fetch API, CSS Grid en Flexbox. https://developer.mozilla.org
+- Get CSS Scan. (z.d.). CSS buttons examples. https://getcssscan.com/css-buttons-examples
 
 ---
 
