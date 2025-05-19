@@ -125,6 +125,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 - OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f600-3d04-8004-b46d-78a2760638ff
 - OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821f696-6fb8-8004-9dbf-8c9283f8233f
 - OpenAI. (2025). ChatGPT (voor uitleg en validatie). https://chatgpt.com/share/6821ff4c-03ec-8004-9c9f-d36b140c9808
+- OpenAI, (2025), chatGPT (voor uitleg en validatie). https://chatgpt.com/share/682b553e-dae8-8000-b8df-f54db03eada6
 - The Movie Database (TMDb). (z.d.). TMDb API documentation. https://developer.themoviedb.org
 - MDN Web Docs. (z.d.). JavaScript, Fetch API, CSS Grid en Flexbox. https://developer.mozilla.org
 - Get CSS Scan. (z.d.). CSS buttons examples. https://getcssscan.com/css-buttons-examples
