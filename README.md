@@ -80,16 +80,16 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 1. open visual studio code, open dan de terminal en voer deze commando uit.
   ```bash
-    cd \pad-naar-gewenste=map
+  cd \pad-naar-gewenste=map
   ```
    
 2. Clone de repository in de visual studio code terminal
 ``` bash
-  git clone https://github.com/MarwanMakouh/Web-Project.git
+git clone https://github.com/MarwanMakouh/Web-Project.git
 ```
 3. Ga naar de map van de gekloonde repository
   ``` bash
-   cd Web-Project
+  cd Web-Project
   ```
 4. Open de map in vs code en voeg jouw eigen TMDB API-leestoegangstoken toe aan `main.js`
 
@@ -100,7 +100,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 6. Start de Vite development server op in de terminal 
   ```bash
-     npx vite HoofdFolder
+ npx vite HoofdFolder
    ```
 7.hou ctrl ingedrukt en klik op de link in de terminal 
 
