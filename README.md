@@ -71,7 +71,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 
 | Functie                    | Bestand           | Regel(s)               |
 |---------------------------|-------------------|------------------------|
-| `localStorage` gebruik     | `main.js`     | 80                     |
+| `localStorage` gebruik     | `main.js`         | 80                     |
 | Donkere modus voorkeur     | `DarkMode.js`     | regel 12               |
 
 ---
@@ -79,23 +79,30 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 ## 🧪 Installatiehandleiding
 
 1. open visual studio code, open dan de terminal en voer deze commando uit.
-   `cd \pad-naar-gewenste=map`
-    
-1. Clone de repository in de visual studio code terminal
-   `git clone https://github.com/MarwanMakouh/Web-Project.git`
+  ```bash
+    cd \pad-naar-gewenste=map
+  ```
+   
+2. Clone de repository in de visual studio code terminal
+``` bash
+  git clone https://github.com/MarwanMakouh/Web-Project.git`
+```
+3. Ga naar de map van de gekloonde repository
+  ``` bash
+   cd Web-Project
+  ```
+4. Open de map in vs code en voeg jouw eigen TMDB API-leestoegangstoken toe aan `main.js`
 
-2. Ga naar de map van de gekloonde repository
-   `cd Web-Project`
+5. Installeer dependencies in de termilnal
+  ```bash
+  `npm install`
+  ```
 
-3. Open de map in vs code en voeg jouw eigen TMDB API-leestoegangstoken toe aan `main.js`
-
-4. Installeer dependencies in de termilnal
-   `npm install`
-
-5. Start de Vite development server op in de terminal 
-   `npx vite HoofdFolder`
-
-6. hou ctrl ingedrukt en klik op de link in de terminal 
+6. Start de Vite development server op in de terminal 
+  ```bash
+     `npx vite HoofdFolder`
+   ```
+7.hou ctrl ingedrukt en klik op de link in de terminal 
 
 ---
 
