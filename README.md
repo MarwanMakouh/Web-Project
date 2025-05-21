@@ -38,7 +38,7 @@ Deze SPA maakt gebruik van `The Movie Database API` om realtime filmdata op te h
 |------------------------------|--------------------------------|------------|
 | API-data ophalen             | `main.js`                      | 1-12       |
 | 20+ items laden              | `main.js` / `ExtrafilmsLaden.js`| 12+       |
-| Data tonen (lijst + details) | `FilmData.js` / `main.js`      | Data --> 9–43 main--> 32-72 en  |
+| Data tonen (lijst + details) | `FilmData.js` / `main.js`      | Data --> 9–43 main--> 32-72|
 | Filter op jaar               | `Zoek.js`                      | 3          |
 | Zoekfunctie                  | `Zoek.js`                      | 2          |
 | Sorteren                     | `Zoek.js`                      | 4          |
